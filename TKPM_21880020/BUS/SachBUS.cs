@@ -14,6 +14,10 @@ namespace TKPM_21880020.BUS
         {
             return sachDAO.LayDuLieu();
         }
+        public DataTable LayDuLieuThemSach()
+        {
+            return sachDAO.LayDuLieuThemSach();
+        }
         public int Them(SachDTO sach)
         {
             if (QuyDinhBUS.isThoiHanSachHopLe(sach.NamXuatBan))
@@ -30,9 +34,13 @@ namespace TKPM_21880020.BUS
         {
             return sachDAO.Xoa(sach);
         }
-        public DataTable LayMaTiepTheo()
+        public static DataTable TraCuuSach(SachDTO sach)
         {
-            return sachDAO.LayMaTiepTheo();
+            return SachDAO.TraCuuSach(sach);
+        }
+        public int TraSach(SachDTO sach)
+        {
+            return sachDAO.TraSach(sach);
         }
     }
 }

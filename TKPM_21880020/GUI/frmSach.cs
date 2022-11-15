@@ -29,12 +29,16 @@ namespace TKPM_21880020.GUI
         {
             LayDSSach();
             LayDSTheLoai();
-            LayMaTiepTheo();
+            //LayMaTiepTheo();
         }
         private void LayDSSach()
         {
             var ds = sachBus.LayDuLieu();
             dgvDS.DataSource = ds;
+            dgvDS.Columns[0].Visible = false;
+            dgvDS.Columns[2].Visible = false;
+            dgvDS.Columns[7].Visible = false;
+            dgvDS.Columns[8].Visible = false;
         }
         private void LayDSTheLoai()
         {
@@ -44,7 +48,7 @@ namespace TKPM_21880020.GUI
             cmbTheLoai.ValueMember = "MaTheLoai";
         }
 
-        private void LayMaTiepTheo()
+        /*private void LayMaTiepTheo()
         {
             var dt = sachBus.LayMaTiepTheo();
             var row = dt.Rows[0];
@@ -56,7 +60,7 @@ namespace TKPM_21880020.GUI
             {
                 SachDTO.MaTiepTheo = (int)row["Max"] + 1;
             }
-        }
+        }*/
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -85,14 +89,14 @@ namespace TKPM_21880020.GUI
 
         private void dgvDS_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgvDS.Rows[e.RowIndex];
-            maSach = (int)row.Cells[0].Value;
-            tbTenSach.Text = row.Cells[1].Value.ToString();
-            cmbTheLoai.SelectedValue = row.Cells[2].Value;
-            tbTacGia.Text = row.Cells[3].Value.ToString();
-            nudNamXuatBan.Value = (int)row.Cells[4].Value;
-            tbNhaXuatBan.Text = row.Cells[5].Value.ToString();
-            dtpNgayNhap.Value = (DateTime)row.Cells[6].Value;
+                DataGridViewRow row = dgvDS.Rows[e.RowIndex];
+                maSach = (int)row.Cells[0].Value;
+                tbTenSach.Text = row.Cells[1].Value.ToString();
+                cmbTheLoai.SelectedValue = row.Cells[2].Value;
+                tbTacGia.Text = row.Cells[3].Value.ToString();
+                nudNamXuatBan.Value = (int)row.Cells[4].Value;
+                tbNhaXuatBan.Text = row.Cells[5].Value.ToString();
+                dtpNgayNhap.Value = (DateTime)row.Cells[6].Value;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -111,6 +115,30 @@ namespace TKPM_21880020.GUI
             if (kq >= 0)
             {
                 MessageBox.Show("Cập nhật thành công");
+                LayDSSach();
+            }
+            if (kq == -1)
+            {
+                MessageBox.Show("Sách quá hạn");
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SachDTO sach = new SachDTO()
+            {
+                MaSach = maSach,
+                TenSach = tbTenSach.Text,
+                TheLoai = (int)cmbTheLoai.SelectedValue,
+                TacGia = tbTacGia.Text,
+                NamXuatBan = (int)nudNamXuatBan.Value,
+                NhaXuatBan = tbNhaXuatBan.Text,
+                NgayNhap = dtpNgayNhap.Value
+            };
+            var kq = sachBus.Xoa(sach);
+            if (kq >= 0)
+            {
+                MessageBox.Show("Xoá thành công");
                 LayDSSach();
             }
             if (kq == -1)

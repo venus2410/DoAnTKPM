@@ -25,12 +25,14 @@ namespace TKPM_21880020.GUI
         {
             LayDSDocGia();
             LayDSLoaiDocGia();
-            LayMaTiepTheo();
         }
         private void LayDSDocGia()
         {
             var ds =dgBUS.LayDuLieu();
             dgvDS.DataSource = ds;
+            dgvDS.Columns[0].Visible = false;
+            dgvDS.Columns[2].Visible = false;
+            dgvDS.Columns[7].Visible = false;
         }
         private void LayDSLoaiDocGia()
         {
@@ -40,24 +42,10 @@ namespace TKPM_21880020.GUI
             cmbLoaiDocGia.ValueMember = "MaLoaiDocGia";
         }
 
-        private void LayMaTiepTheo()
-        {
-            var dt = dgBUS.LayMaTiepTheo();
-            var row = dt.Rows[0];
-            if (string.IsNullOrEmpty(row["Max"].ToString()))
-            {
-                DocGiaDTO.MaTiepTheo = 0;
-            }
-            else
-            {
-                DocGiaDTO.MaTiepTheo = (int)row["Max"] + 1;
-            }
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             DocGiaDTO dg = new DocGiaDTO()
             {
-                MaDocGia = DocGiaDTO.MaTiepTheo,
                 Ten = tbHoTen.Text,
                 MaLoaiDocGia = (int)cmbLoaiDocGia.SelectedValue,
                 NgaySinh=dtpNgaySinh.Value.Date,
@@ -70,7 +58,6 @@ namespace TKPM_21880020.GUI
             
             if(kq>=0)
             {
-                DocGiaDTO.MaTiepTheo++;
                 MessageBox.Show("Them thanh cong");
                 LayDSDocGia();
             }
@@ -115,7 +102,7 @@ namespace TKPM_21880020.GUI
         {
             DataGridViewRow row = dgvDS.Rows[e.RowIndex];
             tbHoTen.Text = row.Cells[1].Value.ToString();
-            cmbLoaiDocGia.SelectedIndex = (int)row.Cells[2].Value-1;
+            cmbLoaiDocGia.SelectedValue = row.Cells[2].Value;
             dtpNgaySinh.Value = (DateTime)row.Cells[3].Value;
             tbDiachi.Text = row.Cells[4].Value.ToString();
             tbEmail.Text = row.Cells[5].Value.ToString();

@@ -31,9 +31,10 @@ namespace TKPM_21880020.BUS
         {
             return dgDao.Xoa(dg);
         }
-        public DataTable LayMaTiepTheo()
+        /*public DataTable LayMaTiepTheo()
         {
             return dgDao.LayMaTiepTheo();
-        }
+        }*/
+        
     }
 }

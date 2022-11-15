@@ -11,18 +11,23 @@ namespace TKPM_21880020.DAO
         private XuLyDuLieu db = new XuLyDuLieu();
         public DataTable LayDuLieu()
         {
-            string str = "select * from DOCGIA where isDeleted=0";
+            string str = "select dg.*,ldg.TenLoaiDocGia from DOCGIA dg,LOAIDOCGIA ldg where dg.MaLoaiDocGia=ldg.MaLoaiDocGia and isDeleted=0";
             return db.DocDuLieu(str);
         }
-        public DataTable LayMaTiepTheo()
+        /*public DataTable LayDocGiaTheoMa(DocGiaDTO dg)
+        {
+            string sql = $"select * from DOCGIA where MaDocGia={dg.MaDocGia}";
+            return db.DocDuLieu(sql);
+        }*/
+       /* public DataTable LayMaTiepTheo()
         {
             string str = "select MAX(MaDocGia) as Max from DOCGIA";
             return db.DocDuLieu(str);
-        }
+        }*/
         
         public int Them(DocGiaDTO dg)
         {
-            string sql = string.Format("insert into DOCGIA(MaDocGia,Ten,MaLoaiDocGia,NgaySinh,DiaChi,Email,NgayLapThe,isDeleted) values ({0},'{1}',{2},'{3}','{4}','{5}','{6}',0)", dg.MaDocGia, dg.Ten, dg.MaLoaiDocGia,dg.NgaySinh,dg.DiaChi,dg.Email,dg.NgayLapThe);
+            string sql = string.Format("insert into DOCGIA(Ten,MaLoaiDocGia,NgaySinh,DiaChi,Email,NgayLapThe,isDeleted) values ('{0}',{1},'{2}','{3}','{4}','{5}',0)",  dg.Ten, dg.MaLoaiDocGia,dg.NgaySinh,dg.DiaChi,dg.Email,dg.NgayLapThe);
             return db.GhiDuLieu(sql);
         }
         public int CapNhat(DocGiaDTO dg)
@@ -35,5 +40,6 @@ namespace TKPM_21880020.DAO
             string sql = string.Format("update DOCGIA set isDeleted=1 where MaDocGia={0}", dg.MaDocGia);
             return db.GhiDuLieu(sql);
         }
+        
     }
 }

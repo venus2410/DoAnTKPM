@@ -39,5 +39,42 @@ namespace TKPM_21880020
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void thayĐổiQuyĐịnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuyDinh frm = new frmQuyDinh();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void quanLyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void traCứuSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTraCuuSach frm = new frmTraCuuSach();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void thêmPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhieuMuon frm = new frmPhieuMuon();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void nhậnTrảSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhanTraSach frm = new frmNhanTraSach();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

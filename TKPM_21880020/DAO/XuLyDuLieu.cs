@@ -9,7 +9,7 @@ namespace TKPM_21880020.DAO
     
     public class XuLyDuLieu
     {
-        public string duong_dan = @"Data Source=AD\SQLEXPRESS;Initial Catalog=TKPM_CSDL_21880020;Integrated Security=True";
+        string duong_dan = @"Data Source=AD\SQLEXPRESS;Initial Catalog=TKPM_CSDL_21880020;Integrated Security=True";
 
         public DataTable DocDuLieu(string sql)
         {

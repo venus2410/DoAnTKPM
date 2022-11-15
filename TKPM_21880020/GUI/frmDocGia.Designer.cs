@@ -50,7 +50,7 @@ namespace TKPM_21880020.GUI
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(507, 311);
+            this.btnThem.Location = new System.Drawing.Point(713, 309);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 0;
@@ -60,14 +60,14 @@ namespace TKPM_21880020.GUI
             // 
             // tbHoTen
             // 
-            this.tbHoTen.Location = new System.Drawing.Point(608, 53);
+            this.tbHoTen.Location = new System.Drawing.Point(814, 51);
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(200, 20);
             this.tbHoTen.TabIndex = 1;
             // 
             // tbDiachi
             // 
-            this.tbDiachi.Location = new System.Drawing.Point(608, 174);
+            this.tbDiachi.Location = new System.Drawing.Point(814, 172);
             this.tbDiachi.Name = "tbDiachi";
             this.tbDiachi.Size = new System.Drawing.Size(200, 20);
             this.tbDiachi.TabIndex = 3;
@@ -76,14 +76,14 @@ namespace TKPM_21880020.GUI
             // 
             this.dtpNgaySinh.CustomFormat = "MM-dd-yyyy";
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(608, 132);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(814, 130);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
             this.dtpNgaySinh.TabIndex = 5;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(608, 209);
+            this.tbEmail.Location = new System.Drawing.Point(814, 207);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(200, 20);
             this.tbEmail.TabIndex = 6;
@@ -91,7 +91,7 @@ namespace TKPM_21880020.GUI
             // dtpNgayLapThe
             // 
             this.dtpNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayLapThe.Location = new System.Drawing.Point(608, 249);
+            this.dtpNgayLapThe.Location = new System.Drawing.Point(814, 247);
             this.dtpNgayLapThe.Name = "dtpNgayLapThe";
             this.dtpNgayLapThe.Size = new System.Drawing.Size(200, 20);
             this.dtpNgayLapThe.TabIndex = 7;
@@ -103,14 +103,14 @@ namespace TKPM_21880020.GUI
             this.dgvDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDS.Location = new System.Drawing.Point(12, 50);
             this.dgvDS.Name = "dgvDS";
-            this.dgvDS.Size = new System.Drawing.Size(489, 282);
+            this.dgvDS.Size = new System.Drawing.Size(676, 282);
             this.dgvDS.TabIndex = 8;
             this.dgvDS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDS_CellClick);
             this.dgvDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDS_CellContentClick);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(620, 310);
+            this.btnCapNhat.Location = new System.Drawing.Point(826, 308);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 9;
@@ -120,7 +120,7 @@ namespace TKPM_21880020.GUI
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(733, 309);
+            this.btnXoa.Location = new System.Drawing.Point(939, 307);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 10;
@@ -131,7 +131,7 @@ namespace TKPM_21880020.GUI
             // cmbLoaiDocGia
             // 
             this.cmbLoaiDocGia.FormattingEnabled = true;
-            this.cmbLoaiDocGia.Location = new System.Drawing.Point(608, 88);
+            this.cmbLoaiDocGia.Location = new System.Drawing.Point(814, 86);
             this.cmbLoaiDocGia.Name = "cmbLoaiDocGia";
             this.cmbLoaiDocGia.Size = new System.Drawing.Size(200, 21);
             this.cmbLoaiDocGia.TabIndex = 11;
@@ -140,7 +140,7 @@ namespace TKPM_21880020.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(536, 53);
+            this.label1.Location = new System.Drawing.Point(742, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 12;
@@ -150,7 +150,7 @@ namespace TKPM_21880020.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(536, 96);
+            this.label2.Location = new System.Drawing.Point(742, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 13;
@@ -159,7 +159,7 @@ namespace TKPM_21880020.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(536, 138);
+            this.label3.Location = new System.Drawing.Point(742, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 14;
@@ -168,7 +168,7 @@ namespace TKPM_21880020.GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(536, 180);
+            this.label4.Location = new System.Drawing.Point(742, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 15;
@@ -177,7 +177,7 @@ namespace TKPM_21880020.GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(536, 215);
+            this.label5.Location = new System.Drawing.Point(742, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 16;
@@ -186,7 +186,7 @@ namespace TKPM_21880020.GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(536, 256);
+            this.label6.Location = new System.Drawing.Point(742, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 17;
@@ -196,7 +196,7 @@ namespace TKPM_21880020.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 450);
+            this.ClientSize = new System.Drawing.Size(1026, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
